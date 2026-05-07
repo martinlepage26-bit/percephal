@@ -70,13 +70,11 @@ The system is working when it can answer — quickly and credibly:
 
    See `12-agent-operating-protocol.md` for how to work with Claude, Grok, or any capable model.
 
----
-
 5. **Minimum Viable Core**
 
-- One Daily Dashboard
-- One Active Projects Hub
-- One Project-State note per live project
+   - One Daily Dashboard
+   - One Active Projects Hub
+   - One Project-State note per live project
 
 ---
 
@@ -99,6 +97,7 @@ PHAROS - Second Brain/
 ├── 12-agent-operating-protocol.md
 ├── method-brain-summary.txt
 └── README.md
+```
 
 # Key Concepts
 
