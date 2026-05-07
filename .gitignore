@@ -1,0 +1,23 @@
+# Obsidian
+.obsidian/
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/
+.obsidian/themes/
+.obsidian/appearance.json
+
+# General junk
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Large or generated files
+*.zip
+node_modules/
+dist/
+build/
+
+# Personal notes you might not want public
+.private/
+secret/
