@@ -53,29 +53,26 @@ The system is working when it can answer — quickly and credibly:
    ```bash
    git clone https://github.com/pharos-ai/percephal.git
    # or download PHAROS - Second Brain.zip
+   ```
 
-2. Install in Obsidian
-- Open Obsidian → **“Open folder as vault”*
-- Select the `PHAROS - Second Brain` folder  *(or the root of this repo)*
+2. **Install in Obsidian**
+   - Open Obsidian → **”Open folder as vault”**
+   - Select the `PHAROS - Second Brain` folder *(or the root of this repo)*
 
-3.Enable the Core Surfaces
-- Copy the templates from `11-obsidian-implementation-templates.md`
-- Create your first:
-- Daily Dashboard
-- Active Projects Hub
-- Pick 1–2 live projects and build their:
-  - Project State records
+3. **Enable the Core Surfaces**
+   - Copy the templates from `11-obsidian-implementation-templates.md`
+   - Create your first:
+     - Daily Dashboard
+     - Active Projects Hub
+   - Pick 1–2 live projects and build their Project State records
 
-4. Start Using the Agent Protocol *(Optional but Recommended)*
+4. **Start Using the Agent Protocol** *(Optional but Recommended)*
 
-See `12-agent-operating-protocol.md` for how to work with:
-- Claude
-- Grok
-- Any capable model
+   See `12-agent-operating-protocol.md` for how to work with Claude, Grok, or any capable model.
 
 ---
 
-5. Minimum Viable Core
+5. **Minimum Viable Core**
 
 - One Daily Dashboard
 - One Active Projects Hub

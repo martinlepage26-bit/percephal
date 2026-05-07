@@ -14,6 +14,7 @@ Thumbs.db
 
 # Large or generated files
 *.zip
+!download/*.zip
 node_modules/
 dist/
 build/
@@ -21,3 +22,6 @@ build/
 # Personal notes you might not want public
 .private/
 secret/
+
+# Loki Mode working state
+.loki/

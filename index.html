@@ -1,1 +1,514 @@
-PASTE THE ENTIRE HTML CODE HERE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PercePhal — Governed cognitive prosthesis from Pharos AI. Institutional continuity for high-responsibility work. Thought that survives interruption becomes work.">
+    <title>PercePhal • Governed Second Brain | Pharos AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts for Cormorant Garamond + DM Sans -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=DM+Sans:wght@400;500&amp;display=swap">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=DM+Sans:wght@400;500&amp;display=swap');
+        
+        :root {
+            --background: oklch(0.11 0.012 255);
+            --foreground: oklch(0.91 0.008 65);
+            --card: oklch(0.15 0.012 255);
+            --copper: oklch(0.72 0.09 65);
+        }
+        
+        * {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 200ms;
+        }
+        
+        body {
+            font-family: 'DM Sans', system-ui, sans-serif;
+            background: oklch(0.11 0.012 255);
+            color: oklch(0.91 0.008 65);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(180deg, oklch(0.11 0.012 255) 0%, oklch(0.13 0.012 255) 100%);
+        }
+        
+        .gov-card {
+            background: oklch(0.15 0.012 255);
+            border: 1px solid oklch(1 0 0 / 8%);
+            border-radius: 0.5rem;
+            padding: 2rem;
+        }
+        
+        .gov-card:hover {
+            border-color: oklch(0.72 0.09 65 / 35%);
+            box-shadow: 0 8px 32px oklch(0 0 0 / 40%), 0 0 0 1px oklch(0.72 0.09 65 / 15%);
+        }
+        
+        .btn-primary {
+            background: oklch(0.72 0.09 65);
+            color: oklch(0.11 0.012 255);
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            padding: 0.875rem 2rem;
+            border-radius: 0.375rem;
+        }
+        
+        .btn-primary:hover {
+            background: oklch(0.78 0.09 65);
+            box-shadow: 0 4px 16px oklch(0.72 0.09 65 / 30%);
+        }
+        
+        .copper-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, oklch(0.72 0.09 65 / 60%), transparent);
+        }
+        
+        .eyebrow {
+            font-family: 'DM Sans', monospace;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: oklch(0.72 0.09 65);
+        }
+        
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 64px;
+            height: 3px;
+            background: linear-gradient(to right, oklch(0.72 0.09 65), oklch(0.62 0.07 65));
+        }
+        
+        .status-dot {
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- NAVBAR -->
+    <nav class="border-b border-white/10 bg-[oklch(0.11_0.012_255)]/95 backdrop-blur-lg sticky top-0 z-50">
+        <div class="max-w-screen-2xl mx-auto px-8 py-6 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 bg-gradient-to-br from-[oklch(0.72_0.09_65)] to-[oklch(0.62_0.07_65)] rounded-2xl flex items-center justify-center text-[oklch(0.11_0.012_255)] font-bold text-2xl shadow-inner">P</div>
+                <span class="text-3xl font-semibold tracking-[-1px]">PHAROS</span>
+                <div class="text-3xl font-semibold tracking-[-1px] text-[oklch(0.72_0.09_65)]">PercePhal</div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-x-10 text-sm font-medium">
+                <a href="#principles" class="hover:text-[oklch(0.72_0.09_65)]">Principles</a>
+                <a href="#architecture" class="hover:text-[oklch(0.72_0.09_65)]">Architecture</a>
+                <a href="#project-state" class="hover:text-[oklch(0.72_0.09_65)]">Project State</a>
+                <a href="#professionals" class="hover:text-[oklch(0.72_0.09_65)]">For Professionals</a>
+                <a href="#templates" class="hover:text-[oklch(0.72_0.09_65)]">Templates</a>
+            </div>
+            
+            <div class="flex items-center gap-x-4">
+                <a href="https://pharos-ai.ca" target="_blank"
+                   class="px-6 py-3 text-sm font-medium rounded-xl border border-white/20 hover:border-[oklch(0.72_0.09_65)] flex items-center gap-x-2">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Pharos AI
+                </a>
+                <button onclick="document.getElementById('download-modal').classList.remove('hidden')"
+                        class="btn-primary flex items-center gap-x-2">
+                    <i class="fa-solid fa-download"></i>
+                    DOWNLOAD METHOD BRAIN
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-bg pt-24 pb-20">
+        <div class="max-w-screen-2xl mx-auto px-8 grid lg:grid-cols-12 gap-16 items-center">
+            <div class="lg:col-span-7 space-y-8">
+                <div class="eyebrow inline-flex items-center">
+                    <span class="status-dot inline-block w-2 h-2 bg-[oklch(0.65_0.15_155)] rounded-full mr-2"></span>
+                    GOVERNED • SHIPPABLE • INSTITUTIONAL NOIR
+                </div>
+                
+                <h1 class="text-7xl lg:text-8xl leading-none tracking-[-2px] font-semibold">
+                    Thought that<br>survives interruption<br>becomes work.
+                </h1>
+                
+                <p class="max-w-xl text-2xl text-[oklch(0.91_0.008_65)]/80">
+                    PercePhal is the governed cognitive prosthesis from Pharos AI.<br>
+                    Continuity-preserving project synthesis for professionals who cannot afford false coherence.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="document.getElementById('download-modal').classList.remove('hidden')"
+                            class="btn-primary text-lg px-10 py-7 rounded-2xl flex items-center gap-x-3">
+                        <i class="fa-solid fa-rocket"></i>
+                        GET PERCEPHAL FREE
+                    </button>
+                    
+                    <a href="#project-state"
+                       class="inline-flex items-center justify-center border border-white/30 hover:border-[oklch(0.72_0.09_65)] text-lg px-8 py-7 rounded-2xl font-medium">
+                        <i class="fa-solid fa-eye mr-3"></i>
+                        SEE PROJECT STATE LIVE
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-x-8 pt-4">
+                    <div class="flex items-center text-sm">
+                        <i class="fa-solid fa-check text-[oklch(0.72_0.09_65)] mr-2"></i>
+                        Obsidian-native
+                    </div>
+                    <div class="flex items-center text-sm">
+                        <i class="fa-solid fa-check text-[oklch(0.72_0.09_65)] mr-2"></i>
+                        Full agent protocol
+                    </div>
+                    <div class="flex items-center text-sm">
+                        <i class="fa-solid fa-check text-[oklch(0.72_0.09_65)] mr-2"></i>
+                        Audit-grade traceability
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hero visual -->
+            <div class="lg:col-span-5">
+                <div class="gov-card relative max-w-lg mx-auto">
+                    <div class="flex justify-between items-start mb-8">
+                        <div>
+                            <div class="eyebrow">PROJECT STATE • LIVE</div>
+                            <h3 class="text-4xl font-semibold mt-1 leading-none">Q3 AI Governance Framework</h3>
+                        </div>
+                        <div class="px-5 py-1 text-xs font-medium rounded-2xl bg-[oklch(0.72_0.09_65)]/10 text-[oklch(0.72_0.09_65)] border border-[oklch(0.72_0.09_65)]/30 flex items-center">
+                            <span class="status-dot inline-block w-2 h-2 bg-[oklch(0.65_0.15_155)] rounded-full mr-1.5"></span>
+                            CANONICAL
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-8 text-sm">
+                        <div>
+                            <div class="font-medium mb-1 flex items-center gap-2">
+                                <span class="diamond"></span>
+                                Core Question
+                            </div>
+                            <p class="text-[oklch(0.91_0.008_65)]/80">How do we make AI procurement decisions traceable, reviewable, and defensible at enterprise scale?</p>
+                        </div>
+                        
+                        <div class="copper-line"></div>
+                        
+                        <div>
+                            <div class="font-medium mb-1 flex items-center gap-2">
+                                <span class="diamond"></span>
+                                Active Tension
+                            </div>
+                            <p class="text-[oklch(0.91_0.008_65)]/80">Innovation velocity versus regulatory prudence</p>
+                        </div>
+                        
+                        <div class="bg-[oklch(0.11_0.012_255)] border border-[oklch(1_0_0/8%)] rounded-2xl p-5 text-xs font-mono">
+                            NEXT SYNTHESIS MOVE → Integrate new regulatory memo into canonical artifact
+                        </div>
+                        
+                        <div class="flex justify-between text-xs text-[oklch(0.91_0.008_65)]/60">
+                            <div>Last reviewed: 47 minutes ago • Review Owner: Legal</div>
+                            <div class="flex items-center"><i class="fa-solid fa-shield-halved mr-1"></i> GOVERNED</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- TRUST BAR -->
+    <div class="bg-[oklch(0.15_0.012_255)] border-y border-white/10 py-7">
+        <div class="max-w-screen-2xl mx-auto px-8 flex flex-wrap justify-center gap-x-10 gap-y-4 text-sm font-medium text-[oklch(0.91_0.008_65)]/80">
+            <div class="flex items-center"><i class="fa-solid fa-building-columns mr-2 text-[oklch(0.72_0.09_65)]"></i> Audit &amp; Compliance</div>
+            <div class="flex items-center"><i class="fa-solid fa-scale-balanced mr-2 text-[oklch(0.72_0.09_65)]"></i> Legal &amp; Regulated Advisory</div>
+            <div class="flex items-center"><i class="fa-solid fa-laptop-code mr-2 text-[oklch(0.72_0.09_65)]"></i> AI Governance</div>
+            <div class="flex items-center"><i class="fa-solid fa-file-contract mr-2 text-[oklch(0.72_0.09_65)]"></i> Procurement &amp; Contracting</div>
+            <div class="flex items-center"><i class="fa-solid fa-brain mr-2 text-[oklch(0.72_0.09_65)]"></i> High-Responsibility Knowledge Work</div>
+        </div>
+    </div>
+
+    <!-- PRINCIPLES -->
+    <section id="principles" class="max-w-screen-2xl mx-auto px-8 py-24">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <div class="eyebrow">DESIGN PRINCIPLES</div>
+                <h2 class="text-6xl font-semibold tracking-[-1px]">Built for continuity.<br>Not collection.</h2>
+            </div>
+            <a href="#" class="text-[oklch(0.72_0.09_65)] font-medium flex items-center gap-x-2 hover:gap-x-3">All principles <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="gov-card">
+                <div class="text-[oklch(0.72_0.09_65)] text-5xl font-light mb-6">01</div>
+                <h4 class="text-2xl font-semibold">Continuity Over Collection</h4>
+                <p class="mt-4 text-[oklch(0.91_0.008_65)]/80">Capture exists only to make resumption effortless. Volume without motion is regression.</p>
+            </div>
+            <div class="gov-card">
+                <div class="text-[oklch(0.72_0.09_65)] text-5xl font-light mb-6">02</div>
+                <h4 class="text-2xl font-semibold">Projects Over Topics</h4>
+                <p class="mt-4 text-[oklch(0.91_0.008_65)]/80">The core unit is active project state — not folders, tags, or notes.</p>
+            </div>
+            <div class="gov-card">
+                <div class="text-[oklch(0.72_0.09_65)] text-5xl font-light mb-6">03</div>
+                <h4 class="text-2xl font-semibold">Synthesis Over Retrieval</h4>
+                <p class="mt-4 text-[oklch(0.91_0.008_65)]/80">The system must produce claims, tensions, bridges, and next moves.</p>
+            </div>
+            <div class="gov-card">
+                <div class="text-[oklch(0.72_0.09_65)] text-5xl font-light mb-6">04</div>
+                <h4 class="text-2xl font-semibold">State Over Static Knowledge</h4>
+                <p class="mt-4 text-[oklch(0.91_0.008_65)]/80">Every live project carries a current canonical state with tensions, blockers, and next synthesis move.</p>
+            </div>
+            <div class="gov-card">
+                <div class="text-[oklch(0.72_0.09_65)] text-5xl font-light mb-6">05</div>
+                <h4 class="text-2xl font-semibold">Governance Over Fluency</h4>
+                <p class="mt-4 text-[oklch(0.91_0.008_65)]/80">Traceability, uncertainty marking, deprecation logic, and contradiction visibility are non-negotiable.</p>
+            </div>
+            <div class="gov-card">
+                <div class="text-[oklch(0.72_0.09_65)] text-5xl font-light mb-6">06</div>
+                <h4 class="text-2xl font-semibold">Lowest Viable Complexity</h4>
+                <p class="mt-4 text-[oklch(0.91_0.008_65)]/80">The system remains usable even when cognitive stamina is low.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section id="architecture" class="bg-[oklch(0.15_0.012_255)] py-24">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <div class="eyebrow mx-auto">FIVE LAYERS OF GOVERNED CONTINUITY</div>
+                <h2 class="text-6xl font-semibold tracking-[-1px]">The complete institutional architecture</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-5 gap-6">
+                <div class="gov-card text-center">
+                    <div class="text-xs uppercase tracking-[1px] mb-2 text-[oklch(0.72_0.09_65)]">Layer 1</div>
+                    <h3 class="text-3xl font-semibold">Memory</h3>
+                    <p class="mt-8 text-sm text-[oklch(0.91_0.008_65)]/70">Raw persistence. Remembers. Does not synthesize.</p>
+                </div>
+                <div class="gov-card text-center">
+                    <div class="text-xs uppercase tracking-[1px] mb-2 text-[oklch(0.72_0.09_65)]">Layer 2</div>
+                    <h3 class="text-3xl font-semibold">Continuity</h3>
+                    <p class="mt-8 text-sm text-[oklch(0.91_0.008_65)]/70">Resumable state across any interruption.</p>
+                </div>
+                <div class="gov-card text-center ring-2 ring-offset-4 ring-offset-[oklch(0.15_0.012_255)] ring-[oklch(0.72_0.09_65)]">
+                    <div class="text-xs uppercase tracking-[1px] mb-2 text-[oklch(0.72_0.09_65)]">Layer 3 • CORE</div>
+                    <h3 class="text-3xl font-semibold">Project State</h3>
+                    <p class="mt-8 text-sm text-[oklch(0.91_0.008_65)]/70">The single source of truth for every live project.</p>
+                </div>
+                <div class="gov-card text-center">
+                    <div class="text-xs uppercase tracking-[1px] mb-2 text-[oklch(0.72_0.09_65)]">Layer 4</div>
+                    <h3 class="text-3xl font-semibold">Synthesis</h3>
+                    <p class="mt-8 text-sm text-[oklch(0.91_0.008_65)]/70">Scaffolds judgment. Never replaces it.</p>
+                </div>
+                <div class="gov-card text-center">
+                    <div class="text-xs uppercase tracking-[1px] mb-2 text-[oklch(0.72_0.09_65)]">Layer 5</div>
+                    <h3 class="text-3xl font-semibold">Governance</h3>
+                    <p class="mt-8 text-sm text-[oklch(0.91_0.008_65)]/70">Traceability, authority, contradiction visibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT STATE EXAMPLE -->
+    <section id="project-state" class="max-w-screen-2xl mx-auto px-8 py-24">
+        <div class="grid lg:grid-cols-12 gap-16 items-center">
+            <div class="lg:col-span-5">
+                <div class="eyebrow">THE CORE OBJECT</div>
+                <h2 class="text-6xl font-semibold tracking-[-1px] mt-4">One canonical record.<br>No drift. No ambiguity.</h2>
+                <p class="mt-8 text-xl text-[oklch(0.91_0.008_65)]/80">Every live project is resumable in under 60 seconds.</p>
+            </div>
+            <div class="lg:col-span-7">
+                <pre class="gov-card font-mono text-sm leading-relaxed p-10 overflow-auto bg-[oklch(0.11_0.012_255)] border border-white/10 text-[oklch(0.91_0.008_65)]/90">
+# Project — AI Governance Procurement
+
+## Status
+<span class="text-[oklch(0.72_0.09_65)]">ACTIVE</span>
+
+## Core Question
+How do we make every AI procurement decision traceable, reviewable, and defensible?
+
+## Canonical Artifact
+→ [[Governance-Framework-v3-canonical.md]] (grounded • last reviewed 2026-05-06)
+
+## Active Tensions
+• Innovation velocity vs. regulatory prudence
+• Vendor opacity vs. audit requirements
+
+## Contradictions To Preserve
+• Internal disagreement on acceptable risk thresholds
+
+## Next Synthesis Move
+Integrate new regulatory memo and update consequence binding
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOR PROFESSIONALS -->
+    <section id="professionals" class="bg-[oklch(0.15_0.012_255)] py-24">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="eyebrow">DOMAIN TRANSLATION</div>
+                <h2 class="text-6xl font-semibold tracking-[-1px]">High-responsibility work demands institutional rigor</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="gov-card text-center">
+                    <i class="fa-solid fa-file-invoice text-4xl mb-6 text-[oklch(0.72_0.09_65)]"></i>
+                    <h4 class="font-semibold">Traceable reference layer</h4>
+                    <p class="mt-3 text-sm text-[oklch(0.91_0.008_65)]/70">Every claim points back to source with status and provenance.</p>
+                </div>
+                <div class="gov-card text-center">
+                    <i class="fa-solid fa-shield-halved text-4xl mb-6 text-[oklch(0.72_0.09_65)]"></i>
+                    <h4 class="font-semibold">Human signatory remains responsible</h4>
+                    <p class="mt-3 text-sm text-[oklch(0.91_0.008_65)]/70">AI assists. You review, you sign, you own.</p>
+                </div>
+                <div class="gov-card text-center">
+                    <i class="fa-solid fa-link text-4xl mb-6 text-[oklch(0.72_0.09_65)]"></i>
+                    <h4 class="font-semibold">Canonicality + supersession</h4>
+                    <p class="mt-3 text-sm text-[oklch(0.91_0.008_65)]/70">Clear “what is current” chain. No silent drift.</p>
+                </div>
+                <div class="gov-card text-center">
+                    <i class="fa-solid fa-triangle-exclamation text-4xl mb-6 text-[oklch(0.72_0.09_65)]"></i>
+                    <h4 class="font-semibold">Contradictions remain visible</h4>
+                    <p class="mt-3 text-sm text-[oklch(0.91_0.008_65)]/70">Premature smoothing is forbidden.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEMPLATES -->
+    <section id="templates" class="max-w-screen-2xl mx-auto px-8 py-24">
+        <div class="text-center mb-16">
+            <div class="eyebrow">READY FOR YOUR VAULT</div>
+            <h2 class="text-6xl font-semibold tracking-[-1px]">Obsidian templates + Agent Operating Protocol</h2>
+        </div>
+        
+        <div class="grid lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-8">
+                <div class="gov-card p-10 font-mono text-sm bg-black/40">
+                    <div class="eyebrow mb-4">DAILY DASHBOARD TEMPLATE</div>
+                    <pre class="text-xs leading-tight text-[oklch(0.91_0.008_65)]/90">## Daily Dashboard — 2026-05-07
+
+### Active Projects
+- [[Project — AI Governance Procurement]]
+
+### Highest-Pressure Synthesis Move
+Integrate new regulatory memo into canonical artifact
+
+### Consequence Binding
+This move makes every procurement decision defensible in audit</pre>
+                </div>
+            </div>
+            <div class="lg:col-span-4 space-y-8">
+                <div class="gov-card">
+                    <i class="fa-solid fa-clock text-3xl mb-4 text-[oklch(0.72_0.09_65)]"></i>
+                    <h4 class="font-semibold">Daily &amp; Weekly Rhythm</h4>
+                    <p class="mt-4 text-sm text-[oklch(0.91_0.008_65)]/80">Restore state. Name the next synthesis move. Never end a session with only more material.</p>
+                </div>
+                <div class="gov-card">
+                    <i class="fa-solid fa-robot text-3xl mb-4 text-[oklch(0.72_0.09_65)]"></i>
+                    <h4 class="font-semibold">Agent Operating Protocol</h4>
+                    <p class="mt-4 text-sm text-[oklch(0.91_0.008_65)]/80">Agents are continuity instruments, never owners. Every output must change project state.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-28 bg-[oklch(0.15_0.012_255)] border-t border-b border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-8 text-center">
+            <h2 class="text-6xl font-semibold tracking-[-1px] max-w-3xl mx-auto">Start building a second brain that actually ships projects.</h2>
+            <p class="mt-8 text-2xl text-[oklch(0.91_0.008_65)]/80">The complete PercePhal Method Brain — 100% free, Obsidian-ready, governance-first.</p>
+            
+            <button onclick="document.getElementById('download-modal').classList.remove('hidden')" 
+                    class="btn-primary text-2xl mt-12 px-14 py-8 rounded-3xl flex items-center gap-x-4 mx-auto">
+                <i class="fa-solid fa-download"></i>
+                DOWNLOAD FULL PACKAGE
+            </button>
+            
+            <p class="text-xs text-[oklch(0.91_0.008_65)]/40 mt-8">Includes all 12 core documents, templates, agent protocol, and project-state model.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[oklch(0.11_0.012_255)] py-16 border-t border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-8 text-[oklch(0.91_0.008_65)]/60 text-sm flex flex-col md:flex-row justify-between items-center">
+            <div>© 2026 Pharos AI • percephal.pharos-ai.ca</div>
+            <div class="flex gap-x-8 mt-6 md:mt-0">
+                <a href="https://pharos-ai.ca" class="hover:text-[oklch(0.72_0.09_65)]">Pharos AI Governance</a>
+                <a href="#templates" class="hover:text-[oklch(0.72_0.09_65)]">Documentation</a>
+                <a href="#templates" class="hover:text-[oklch(0.72_0.09_65)]">Agent Protocol</a>
+                <a href="https://pharos-ai.ca" class="hover:text-[oklch(0.72_0.09_65)]">Privacy &amp; Governance</a>
+            </div>
+            <div class="flex items-center gap-x-2 mt-6 md:mt-0">
+                Made under rigorous institutional governance 
+                <span class="text-3xl">🪔</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DOWNLOAD MODAL -->
+    <div id="download-modal" onclick="if(event.target.id === 'download-modal')this.classList.add('hidden')" 
+         class="hidden fixed inset-0 bg-black/80 backdrop-blur-2xl z-[9999] flex items-center justify-center">
+        <div onclick="event.stopImmediatePropagation()" 
+             class="bg-[oklch(0.15_0.012_255)] rounded-3xl max-w-md w-full mx-4 p-10">
+            <h3 class="text-4xl font-semibold tracking-[-1px]">Download PercePhal</h3>
+            <p class="mt-2 text-[oklch(0.91_0.008_65)]/70">PHAROS — Second Brain.zip</p>
+            
+            <div class="mt-10 flex justify-between items-center bg-[oklch(0.11_0.012_255)] p-6 rounded-2xl border border-white/10">
+                <div class="flex items-center">
+                    <i class="fa-solid fa-file-zipper text-4xl text-[oklch(0.72_0.09_65)]"></i>
+                    <div class="ml-4">
+                        <div class="font-medium">PHAROS - Second Brain.zip</div>
+                        <div class="text-xs text-[oklch(0.91_0.008_65)]/40">12 documents • Templates • Protocol</div>
+                    </div>
+                </div>
+                <div class="text-xs font-mono text-[oklch(0.72_0.09_65)]">27 KB</div>
+            </div>
+            
+            <button onclick="simulateDownload()" 
+                    class="w-full btn-primary mt-8 text-xl py-7 rounded-2xl">DOWNLOAD NOW</button>
+            
+            <p class="text-center text-xs text-[oklch(0.91_0.008_65)]/40 mt-8">No email. No account. Pure method.</p>
+        </div>
+    </div>
+
+    <script>
+        function simulateDownload() {
+            const btn = event.currentTarget;
+            const original = btn.innerHTML;
+            btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin mr-3"></i>PREPARING PACKAGE…`;
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                const a = document.createElement('a');
+                a.href = '/download/PHAROS%20-%20Second%20Brain.zip';
+                a.download = 'PHAROS - Second Brain.zip';
+                a.click();
+                
+                btn.innerHTML = original;
+                btn.disabled = false;
+                
+                const toast = document.createElement('div');
+                toast.style.cssText = 'position:fixed;bottom:24px;right:24px;background:oklch(0.72 0.09 65);color:oklch(0.11 0.012 255);padding:16px 24px;border-radius:9999px;font-weight:600;box-shadow:0 10px 30px -10px oklch(0.72 0.09 65);';
+                toast.innerHTML = `✅ Package downloaded. Welcome to PercePhal.`;
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 3200);
+            }, 1200);
+        }
+        
+        console.log('%cPercePhal • Dark Governance Edition ready for percephal.pharos-ai.ca', 'color:#C9A96E; font-family:monospace;');
+    </script>
+</body>
+</html>
